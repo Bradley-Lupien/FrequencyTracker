@@ -1,9 +1,10 @@
-#include <iostream>
+#include "cliFrontEnd.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    cliFrontEnd* cli = new cliFrontEnd("PTKR >> ");
+    cli->run();
     return 0;
 }

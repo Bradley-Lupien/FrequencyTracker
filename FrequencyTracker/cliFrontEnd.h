@@ -1,19 +1,20 @@
 #ifndef CLIFRONTEND_H_INCLUDED
 #define CLIFRONTEND_H_INCLUDED
-#include <vector>
+#include <string>
 
 class cliFrontEnd
 {
 private:
     std::string prompt = "FTKR >> ";
-    char* title = "Frequency Tracker";
+    bool running = true;
 public:
-    cliFrontEnd(std::string prompt, char* title);
+    cliFrontEnd(std::string prompt);
     ~cliFrontEnd();
-    std::vector<std::string> parseCommand(std::string cmd);
     void                     setPrompt(std::string prompt);
     std::string              getPrompt();
-    char*                    getTitle();
+    void                     displayCLI();
+    void                     getInput();
+    void                     run();
 };
 
 #endif // CLIFRONTEND_H_INCLUDED
