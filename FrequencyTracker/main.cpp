@@ -1,10 +1,10 @@
-#include "cliFrontEnd.h"
+#include "cli.h"
 
 using namespace std;
 
 int main()
 {
-    cliFrontEnd* cli = new cliFrontEnd("PTKR >> ");
+    cli* commandLine = new cli("FTKR >> ");
     cli->run();
     return 0;
 }
